@@ -1,0 +1,237 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+
+    <link rel="icon" href="img/calldata.png" type="image/icon type">
+
+    <link rel="stylesheet" href="style.css" />  
+    <title>Call Data</title>
+</head>
+<body>
+    <header>
+    <nav class="teal lighten-2">
+        <div class="nav-wrapper container ">
+          <a href="index.html" class="brand-logo">MyAnalysis.com</a>
+          <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+          <ul class="right hide-on-med-and-down">
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+            
+          </ul>
+        </div>
+      </nav>
+    
+      <ul class="sidenav" id="mobile-demo">
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="about.html">ABOUT</a></li>
+        <li><a href="contact.html">CONTACT</a></li>
+        
+      </ul>
+
+    </header>
+
+
+    <main class="container">
+      
+      <h2>Call Data Analysis ( January 2019 )</h2>
+      
+       
+        <blockquote>
+            Posted JUNE 26,2020
+          </blockquote>
+                
+
+        <h4>About</h4>
+        <p>
+          For this <b>visualization</b> project I have chosen to use the Call Data 
+          of the month of January 2019.<br>
+          The dataset that I am using in this project is taken from <a href="https://data.gov.in/">Data.gov.in</a> which was
+          in the CSV form and was really unclean. Firstly I cleaned the data and removed all the irrelevant
+          entries and then tried to analyse and output it in the forms of different graphs and plots using different
+          python visualization libraries such as matplotlib and pyplot. 
+        </p>
+        
+        <h4>Cleaning of Data</h4>
+        <p>
+            The data which i downloaded from the <a href="https://data.gov.in/">Data.gov.in</a> website had thousands of 
+            missing data and many <b>NaN</b> values.I dropped the data which was not neccessary using the pandas
+            framework.The main problem with the data was that 50% of the <b>State Name</b> column was <b>NaN</b> but the latitude and
+            longitude was provided.<br>
+            Using the <b>reverse_geocoder</b> and the <b>pprint</b> libraries in python I wrote a function
+            which took latitude and longitude of the columns <u>having State Name as NaN</u> as parameters and the 
+            function returned the location and I stored it in the corresponding State Name column.
+            
+          </p>
+            <br>
+            <p>
+              <b>Below u can see the raw or the Unlcean data that I downloaded.</b>
+            </p>
+
+            <iframe src="/calldata/call1.html" style="padding:0px;" width="100%" height="400px"></iframe>          
+        
+            <p><i>We cannot find any mistakes or NaN values from just viewing the it.
+              So i used the <b>Pandas</b> functions to find null values and other missing data
+            </i></p><br>
+
+            <iframe src="/calldata/call2.html" style="padding:0px;" width="100%" height="350px"></iframe>          
+
+            <p>
+              <i>In the above output u can see the number of <b>NaN</b> values of each column.
+              We can delete all the data of <b>In Out Travelling</b> having null values as it is a small 
+            number but we cannot do it for <b>State Name</b>.<br>
+                So firstly i removed all the other NaN values except State Name and then replaced the 
+                NaN values of State Name with <b>0</b>.<br><br>
+
+                *After dealing with missing values I used pyhton's <b>reverse_geocoder</b> and <b>pprint</b>
+                libraries to take latitude and longitude as input for a function and return the location
+                 and replaced  it in the empty <b>State Name</b>.
+            </p>
+
+            <iframe src="/calldata/call3.html" width="100%" height="300px"></iframe>
+            <br>
+            <p>Here you can see that once the function is execute the <b>State Name</b> has no NaN values which
+              means our code run successfully.After that i saved the cleaned data set in a new CSV file 
+              <b>cleanfile.csv</b>
+            </p></i><br>
+
+            <b>You can download both CSV files from here: </b><br>
+            <b>Uncleaned CSV : </b>
+            <a href="/calldata/MyCall_Data_January_2019_Final_2.csv" class="btn-floating  pulse"><i class="material-icons">south</i></a><br>
+            <br>
+            <b>Cleaned CSV : </b>&nbsp;&nbsp;&nbsp;
+            <a href="/calldata/cleanfile.csv" class="btn-floating   pulse"><i class="material-icons">south</i></a>
+           
+
+            <br>
+            <hr>
+        <h4>Analysing & Visualization of Data</h4>
+
+        
+        <p>
+          Here comes the fun part where we can analyse the data which we just cleaned and visualize them
+          using different graphs and charts.If you want the code for plotting the graphs you can download
+          the full <b>Juypter Notebook</b> file given at the bottom of page.
+          <br>
+          <b><blockquote>Note : All graphs and charts are made using <a href="https://plotly.com/">plotly</a> which
+            are interactive on real time.</blockquote> </b>
+        </p>
+
+
+       
+      <iframe width="100%" height="400px" frameborder="0" scrolling="yes" src="//plotly.com/~lovelgeorge/9.embed"></iframe>
+      <br><br>
+      <i><h6>The above piechart displays the percentage of contribution of different Operators.
+        We can see that <b>Reliance Jio</b> has the maximum share of 49.2% and <b>Airtel</b> on the second place 
+        with 22.2% of the share.<b>Vodafone,Idea and BSNL</b> have a very small share as compared to Jio and Airtel</b>
+      </h6></i><br><hr>
+      
+      <iframe width="100%" height="500px" frameborder="0" scrolling="yes" src="//plotly.com/~lovelgeorge/17.embed"></iframe>
+      <br><br>
+      <i><h6>The above bar graph shows the exact number of users of different Operators in the month of January 2019.
+        We can see that RJio has more than 25000 users and Airtel which is on the second place is not even having
+        the half of users as RJio.
+      </h6></i><br><hr>
+
+
+      <iframe width="100%" height="500px" frameborder="0" scrolling="yes" src="//plotly.com/~lovelgeorge/11.embed"></iframe>
+      <br><br>
+      <i><h6>The above bar graph shows the <b>comparison</b> between the users of the top two Operators that is RJio and Airtel
+        in different states.We can see that <b>Maharashtra</b> has the maximum numberof RJio users as compared
+        to other states and <b>Kashmir</b> has the maximum number of Airtel users.
+      </h6></i><br><hr>
+
+
+
+      <iframe width="100%" height="600px" frameborder="0" scrolling="yes" src="//plotly.com/~lovelgeorge/13.embed"></iframe>
+      <br><br>
+      <i><h6>Now this graph is a <b>Stack Graph</b> showing us the Call Drop Category of different Operators.
+
+      </h6></i><br><hr>
+        
+
+
+      <h4>Conclusion</h4>
+      <p>
+        We can easily conclude that Reliance Jio has the maximum numbers of users with satisfactory performance
+        in most of the states in a short span of time as compared to Airtel or other users which have been providing
+        services long before Reliance Jio.
+      </p>
+
+
+
+        <a class="right">Download Full Code as .ipynb</a><br>
+        <a href="/ipynb/calldata.ipynb" class="btn-floating right pulse"><i class="material-icons">south</i></a>
+        
+        <br><br><br><br>
+
+
+
+
+       
+        
+       
+
+
+
+        
+    </main>
+
+
+
+
+
+
+    <footer class="page-footer teal darken-4">
+
+      <div class="container">
+        <div class="row">
+          <div class="col l4 s12">
+            <h5 class="white-text">Follow Me</h5>
+
+            
+          <h4>
+            <a title="Twitter" target="_blank" class="blue-text" href="https://twitter.com/LovelGeorge2"><i class="icon-twitter">&nbsp </i></a>
+            <a title="LinkedIn" target="_blank" class="blue-text" href="https://www.linkedin.com/in/lovel-george-922106194/"><i class="icon-linkedin">&nbsp</i></a>
+            <a title="Instagram" target="_blank" class="pink-text text-lighten-3" href="https://www.instagram.com/lovel_george/"><i class="icon-instagram"> &nbsp</i></a>
+          </h4>
+          
+          </div>
+
+          <div class="col l4 s12 right">
+            <h5>About this site</h5>
+            <h6 class="right">
+            I  created this website using the <a href="https://materializecss.com/">Materialize Framework </a>to make it attractive and responsive.              </h6>
+          </div>
+        </div>
+        </div>
+      </div>
+
+
+      <div class="footer-copyright">
+        <div class="container center">
+          © 2020 Lovel George. All rights reserved.
+        
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+          $(document).ready(function(){
+            $('.sidenav').sidenav();
+             });
+
+             $(document).ready(function(){
+    $('.materialboxed').materialbox();
+  });
+
+
+    </script>
+</body>
+</html>

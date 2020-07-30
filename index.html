@@ -1,0 +1,153 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css" /> 
+    
+    
+
+    <link rel="icon" href="img/icon.png" type="image/icon type">
+
+    <title>Home</title>
+</head>
+<body>
+    <header>
+    <nav class="teal lighten-2">
+        <div class="nav-wrapper container ">
+          <a href="#!" class="brand-logo">MyAnalysis.com</a>
+          <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+          <ul class="right hide-on-med-and-down">
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+            
+          </ul>
+        </div>
+      </nav>
+    
+      <ul class="sidenav" id="mobile-demo">
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="about.html">ABOUT</a></li>
+        <li><a href="contact.html">CONTACT</a></li>
+        
+      </ul>
+
+    </header>
+
+    <main id="home">
+
+        <div class="row">
+            <div class="col s12 m6 l4 xl4">
+              <a title="Go to Page" href="/wordcloud.html"><div class="card">
+                <div class="card-image">
+                  <img src="/img/wordcloud.png" height="270">
+                  
+                </div>
+                <div class="card-content">
+                  <span class="card-title orange-text darken-4">Word Cloud </span>
+                  <p>
+                    This is my first visualization project through Coursera.
+
+                  </p>
+                </div>
+              </div></a>
+            </div>  
+
+            <div class="col s12 m6 l4 xl4">
+              <a title="Go to Page" href="/calldata.html"><div class="card">
+                <div class="card-image">
+                  <img src="/img/calldata.png" height="270">
+                  
+                </div>
+                <div class="card-content">
+                  <span class="card-title orange-text darken-4">Call Data Analysis</span>
+                  <p>
+                    This is a simple Analysis of Call Data of January 2019.
+                  </p>
+                </div>
+              </div></a>
+            </div>
+
+            <div class="col s12 m6 l4 xl4">
+              <a  onclick="M.toast({html: 'Please Wait a Few days'})" title="Go to Page"><div class="card">
+                <div class="card-image">
+                  <img src="/img/netflix.png" height="270">
+                  
+                </div>
+                <div class="card-content">
+                  <span class="card-title orange-text darken-4">Upcoming.....</span>
+                  <p>
+                   This Will be Uploaded soon
+                  </p>
+                </div>
+              </div></a>
+            </div>
+
+            
+        </div>
+    </main>
+
+
+
+
+
+
+      <footer class="page-footer teal darken-4">
+
+        <div class="container">
+          <div class="row">
+            <div class="col l4 s12">
+              <h5 class="white-text">Follow Me</h5>
+
+              
+            <h4>
+              <a title="Twitter" target="_blank" class="blue-text" href="https://twitter.com/LovelGeorge2"><i class="icon-twitter">&nbsp </i></a>
+              <a title="LinkedIn" target="_blank" class="blue-text" href="https://www.linkedin.com/in/lovel-george-922106194/"><i class="icon-linkedin">&nbsp</i></a>
+              <a title="Instagram" target="_blank" class="pink-text text-lighten-3" href="https://www.instagram.com/lovel_george/"><i class="icon-instagram"> &nbsp</i></a>
+            </h4>
+            
+            </div>
+
+            <div class="col l4 s12 right">
+              <h5>About this site</h5>
+              <h6 class="right">
+              I  created this website using the <a href="https://materializecss.com/">Materialize Framework </a>to make it attractive and responsive.              </h6>
+            </div>
+          </div>
+          </div>
+        </div>
+
+
+        <div class="footer-copyright">
+          <div class="container center">
+            © 2020 Lovel George. All rights reserved.
+          
+          </div>
+        </div>
+      </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+
+
+
+
+          $(document).ready(function(){ 
+
+              M.toast({html: 'For Best Experince Open Website in Desktop'},10)
+
+            
+            $('.sidenav').sidenav();
+             });
+
+
+
+
+    </script>
+</body>
+</html>

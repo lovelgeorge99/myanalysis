@@ -1,0 +1,156 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+
+
+    <link rel="icon" href="img/contact.jpeg" type="image/icon type">
+
+    <link rel="stylesheet" href="style.css" />  
+    <title>Contact Me</title>
+
+
+</head>
+<body>
+    <header>
+    <nav class="teal lighten-2">
+        <div class="nav-wrapper container ">
+          <a href="index.html" class="brand-logo">MyAnalysis.com</a>
+          <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+          <ul class="right hide-on-med-and-down">
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+            
+          </ul>
+        </div>
+      </nav>
+    
+      <ul class="sidenav" id="mobile-demo">
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="about.html">ABOUT</a></li>
+        <li><a href="contact.html">CONTACT</a></li>
+        
+      </ul>
+
+      
+
+
+    </header>
+ <main class="container">
+     <h1 class="center">Contact Me</h1>
+
+     <div class="row">
+      <form class="col s12">
+        <div class="row">
+
+          <div class="input-field col s12 m6 l6 xl6 ">
+            <input id="first_name" type="text" class="validate">
+            <label for="first_name">First Name</label>
+          </div>
+          <div class="input-field col s12 m6 l6 xl6">
+            <input id="last_name" type="text" class="validate">
+            <label for="last_name">Last Name</label>
+          </div>
+        </div>
+
+        <div class="row">
+
+
+
+          <div class="input-field  col s12 m6 l6 xl6">
+            <input id="email" type="email" class="validate">
+            <label for="email">Email</label>
+          </div>
+
+          <div class="input-field col s12 m6 l6 xl67">
+            <select multiple>
+              <option value="" disabled >Choose ur Option</option>
+              <option value="1">Data Cleaning</option>
+              <option value="2">Data Visualization</option>
+              <option value="3">Web Development</option>
+              <option value="4">Other</option>
+
+            </select>
+            <label>Your Query Is Related To</label>
+          </div>
+        
+        
+
+
+
+          
+        </div>
+
+        
+
+        <div class="row">
+          <div class="input-field col s12">
+            <textarea id="textarea1" class="materialize-textarea"></textarea>
+            <label for="textarea1">How Can I Help You?</label>
+          </div>
+        </div>
+
+
+        <a onclick="M.toast({html: 'Message Send'})" class="btn">Send</a>
+
+      </form>
+    </div>
+          
+
+ </main>
+
+
+
+
+
+
+ <footer class="page-footer teal darken-4">
+
+  <div class="container">
+    <div class="row">
+      <div class="col l4 s12">
+        <h5 class="white-text">Follow Me</h5>
+
+        
+      <h4>
+        <a title="Twitter" target="_blank" class="blue-text" href="https://twitter.com/LovelGeorge2"><i class="icon-twitter">&nbsp </i></a>
+        <a title="LinkedIn" target="_blank" class="blue-text" href="https://www.linkedin.com/in/lovel-george-922106194/"><i class="icon-linkedin">&nbsp</i></a>
+        <a title="Instagram" target="_blank" class="pink-text text-lighten-3" href="https://www.instagram.com/lovel_george/"><i class="icon-instagram"> &nbsp</i></a>
+      </h4>
+      
+      </div>
+
+      <div class="col l4 s12 right">
+        <h5>About this site</h5>
+        <h6 class="right">
+        I  created this website using the <a href="https://materializecss.com/">Materialize Framework </a>to make it attractive and responsive.              </h6>
+      </div>
+    </div>
+    </div>
+  </div>
+
+
+  <div class="footer-copyright">
+    <div class="container center">
+      © 2020 Lovel George. All rights reserved.
+    
+    </div>
+  </div>
+</footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+          $(document).ready(function(){
+            $('.sidenav').sidenav();
+            $('select').formSelect();
+             });
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,146 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+
+    <link rel="icon" href="img/wordcloud.png" type="image/icon type">
+
+    <link rel="stylesheet" href="style.css" />  
+    <title>WordCloud</title>
+</head>
+<body>
+    <header>
+    <nav class="teal lighten-2">
+        <div class="nav-wrapper container ">
+          <a href="index.html" class="brand-logo">MyAnalysis.com</a>
+          <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+          <ul class="right hide-on-med-and-down">
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+            
+          </ul>
+        </div>
+      </nav>
+    
+      <ul class="sidenav" id="mobile-demo">
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="about.html">ABOUT</a></li>
+        <li><a href="contact.html">CONTACT</a></li>
+        
+      </ul>
+
+    </header>
+
+
+    <main class="container">
+        <h2>Word Cloud Using Python</h2>
+        <blockquote>
+            Posted JUNE 26,2020
+          </blockquote>
+                
+
+        <h4>What is Word Cloud?</h4>
+        <p>
+            A word cloud is a popular <b>visualization</b> of words typically associated with Internet 
+            keywords and text data. 
+            They are most commonly used to highlight popular or trending terms based on 
+            frequency of use and prominence. A word cloud is a beautiful, 
+            informative image that communicates much in a single glance.
+        </p>
+        
+        <h4>About This Project</h4>
+        <p>
+            This is my first data visualization project which I  did while completing a 
+            <a href="">Coursera Course</a>
+             based on Data Science. Most of the importing of libraries and code for file upload extension
+            was provided my the coursera platform.<br> But the main function to remove the punctuations and 
+            uninteresting words and code for  Word Cloud Generator was coded by me.
+            
+            <br>
+            
+        </p>
+
+        <h4>Code and Snippets</h4>
+        <p>The below code is a function that removes all the punctuations and the uninteresting words from 
+            and a file with txt extension and then stores the count of each word in a dictionary so that it can be
+            passed in the <b>matplotlib</b> funtion to create a Word Cloud Image.
+        </p>
+        <img class="materialboxed" width="100%" src="/img/3.png">
+        <br>
+        Here u can see iI call the calculate_frequencies() function and store the resultant dictionary
+        in myimage variable. Then I use the matplotlib library to pass the dictionary as argument and 
+        genrate the Word Cloud.<br>
+
+        <img class="materialboxed" width="100%" src="/img/5.png"><br>
+
+        
+        <a class="right">Download Full Code as .ipynb</a><br>
+        <a href="/ipynb/wordcloud.ipynb" class="btn-floating right pulse"><i class="material-icons">south</i></a>
+        
+        <br><br><br><br>
+        
+       
+
+
+
+        
+    </main>
+
+
+
+
+
+
+    <footer class="page-footer teal darken-4">
+
+      <div class="container">
+        <div class="row">
+          <div class="col l4 s12">
+            <h5 class="white-text">Follow Me</h5>
+
+            
+          <h4>
+            <a title="Twitter" target="_blank" class="blue-text" href="https://twitter.com/LovelGeorge2"><i class="icon-twitter">&nbsp </i></a>
+            <a title="LinkedIn" target="_blank" class="blue-text" href="https://www.linkedin.com/in/lovel-george-922106194/"><i class="icon-linkedin">&nbsp</i></a>
+            <a title="Instagram" target="_blank" class="pink-text text-lighten-3" href="https://www.instagram.com/lovel_george/"><i class="icon-instagram"> &nbsp</i></a>
+          </h4>
+          
+          </div>
+
+          <div class="col l4 s12 right">
+            <h5>About this site</h5>
+            <h6 class="right">
+            I  created this website using the <a href="https://materializecss.com/">Materialize Framework </a>to make it attractive and responsive.              </h6>
+          </div>
+        </div>
+        </div>
+      </div>
+
+
+      <div class="footer-copyright">
+        <div class="container center">
+          © 2020 Lovel George. All rights reserved.
+        
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+          $(document).ready(function(){
+            $('.sidenav').sidenav();
+             });
+
+             $(document).ready(function(){
+    $('.materialboxed').materialbox();
+  });
+
+
+    </script>
+</body>
+</html>
